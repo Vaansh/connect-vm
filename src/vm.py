@@ -1,5 +1,6 @@
 import json
 import os
+
 from typing import List
 from subprocess import Popen, PIPE
 
@@ -20,3 +21,10 @@ def get_curr_files() -> None:
 def exec_applescript(script) -> None:
     p = Popen(["osascript", "-"], stdin=PIPE, stdout=PIPE, stderr=PIPE, universal_newlines=True)
     stdout, stderr = p.communicate(script)
+
+
+def open_spotlight() -> None:
+    with open("src/applescripts/open-spotlight.applescript", "r") as f:
+        script = f.read()
+
+    exec_applescript(script)
