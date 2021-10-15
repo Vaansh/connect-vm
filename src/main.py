@@ -3,8 +3,7 @@ import vm
 
 def main() -> None:
     cred = vm.get_credentials("sample-secrets.json")
-    print(cred)
-    return
+    vm.open_spotlight()
 
 
 if __name__ == "__main__":
