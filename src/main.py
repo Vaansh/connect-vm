@@ -2,7 +2,7 @@ import vm
 
 
 def main() -> None:
-    cred = vm.get_credentials("sample-secrets.json")
+    # cred = vm.get_credentials("sample-secrets.json")
     vm.open_vm()
 
 
