@@ -1,1 +1,3 @@
-tell application "System Events" to keystroke space using {command down}
+tell application "System Events"
+    keystroke " " using {command down}
+end tell
